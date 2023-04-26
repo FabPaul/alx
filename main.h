@@ -15,6 +15,8 @@
 #include <sys/resource.h>
 #include <stddef.h>
 
+#define MAX_ENTRY 1024
+
 
 void prompt(char **av, char **envp);
 

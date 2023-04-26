@@ -9,9 +9,9 @@
 
 void prompt(char **av, char **envp)
 {
-	char *lineptr = NULL, *argv[] = {NULL, NULL};
+	char *lineptr = NULL, *argv[MAX_ENTRY];
 	size_t n = 0;
-	int i, wstatus;
+	int i, wstatus, j;
 	ssize_t stream;
 	pid_t pid;
 
@@ -34,7 +34,13 @@ void prompt(char **av, char **envp)
 			}
 			i++;
 		}
-		argv[0] = lineptr;
+        j = 0
+		argv[j] = strtok(lineptr, " ");
+        while (arg[j] != NULL)
+        {
+            j++;
+            argv[j] = strtok(NULL, " ");
+        }
 		pid = fork();
 		if (pid == -1)
 		{
