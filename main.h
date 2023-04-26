@@ -7,8 +7,8 @@
 #include <sys/types.h>
 #include <dirent.h>
 #include <signal.h>
-#include <sys/stat.c>
-#include < fcntl.h>
+#include <sys/stat.h>
+#include <fcntl.h>
 #include <string.h>
 #include <sys/wait.h>
 #include <sys/time.h>
